@@ -1,7 +1,7 @@
 server:
-	cd ./ModuleA; make;
+	gcc server.c -I./Include -o server -lpthread -lmysqlclient -L/usr/include/
 client:
-	cd ./ModuleB; make;
+	gcc client.c -I./Include -o client -lpthread
 clean:
-	cd ./ModuleA; make clean;
-	cd ./ModuleB; make clean;
+	rm server;
+	rm client;
