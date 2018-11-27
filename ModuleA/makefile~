@@ -1,0 +1,4 @@
+server:
+	gcc server.c -o ../server -lpthread -lmysqlclient -L/usr/include/
+clean:
+	rm ../server
